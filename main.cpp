@@ -3,7 +3,7 @@
 #include <cmath>
 using namespace std;
 int main(int argc, char const *argv[]) {
-  float i, n, a;
+  float i, n;
   cin >> n;
   return 0;
 }
