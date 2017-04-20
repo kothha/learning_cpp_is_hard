@@ -1,25 +1,31 @@
 //8.3 by me and crusadwerei0fojxskvmjsklf
 #include <iostream>
 #include <cmath>
+#include <conio.h>
 using namespace std;
 
-float a;
+int a;
 int n;
 
-float stepen (int n, float b);
-int main ()
+int stepen(int n, int b);
+int main()
 {
-    float proiz;
-    cin>>n>>a;
-    if (n%2 ==0) proiz=stepen(n/2,a)*stepen(n/2,a) ; else  proiz=a*stepen(n-1,a);
-    cout << proiz;
-    return 0;
+	int proiz;
+	cin >> n >> a;
+	if (n % 2 == 0) proiz = stepen(n / 2, a)*stepen(n / 2, a); else  proiz = a*stepen(n - 1, a);
+	cout << proiz;
+	_getch();
 }
 
-float stepen (int n, float b)
+int stepen(int n, int b)
 {
-    if (n)
-     {
-     b=pow(b,n); stepen(n-1,b);
-     } else return(b);
+	if (n)
+	{
+		if (n == 1)
+			return b;
+		b *= a;
+		stepen(n - 1, b);
+	}
+	else 
+		return 1;
 }
