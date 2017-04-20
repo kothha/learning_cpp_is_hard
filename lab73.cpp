@@ -22,6 +22,6 @@ int main ()
 float ploshad (float xx1,float yy1,float xx2,float yy2,float xx3,float yy3)
 {
     float sp;
-    sp=abs(((xx1-xx3)*(yy2-yy3)-(xx2-xx3)*(yy1-yy3))/2);
+    sp=abs(((xx1-xx3)*(yy2-yy3)-(xx2-xx3)*(yy1-yy3))*0.5);
     return (sp);
 }
