@@ -6,7 +6,7 @@ float ploshad (float xx1,float yy1,float xx2,float yy2,float xx3,float yy3); //Ñ
 
 int main ()
 {
-    float x1,y1,x2,y2,x3,y3,pl1,pl2,pl3;
+    float x1,y1,x2,y2,x3,y3,pl1,pl2;
     int i;
     cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
     pl1=ploshad(x1,y1,x2,y2,x3,y3);
