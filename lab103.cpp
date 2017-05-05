@@ -1,29 +1,29 @@
+#include "stdafx.h"
 #include <iostream>
-#include <iomanip>
+#include <string>
 using namespace std;
 
-struct ycheniki {
-    char fam[15];
-    char name[15];
-    char bykva;
-    int nomer;
-};
+	struct ych {
+		string fam;
+		string name;
+		char bykva;
+		int nomer;
+	};
 
 int main()
 {
-    setlocale(LC_ALL, "Russian");
-    ycheniki spis[11]; int n=2; int i,k;
-    for (i=1; i<=n; i++) {
-        cout << "Фамилия, имя, номер и буква ученика " << i << endl; //lol
-        cin >> spis[i].fam >> spis[i].name >> spis[i].nomer >> spis[i].bykva;
-    }
-    cout << "Одиноковое имя и фамилия у: ";
-    for (i=1; i<=n-1; i++) {
-    for (k=i+1; k<=n; k++) {
-        if ((spis[i].fam==spis[k].fam)&&(spis[i].name==spis[k].name)) {
-            cout << spis[i].fam << " " << spis[i].name << " " << spis[i].nomer << " " << spis[i].bykva << endl;
-            cout << spis[k].fam << " " << spis[k].name << " " << spis[k].nomer << " " << spis[k].bykva << endl;
-        } } }
-    return 0;
+	ych spisok[10];
+	for (int i=0; i < 10; i++) {
+		cout << "Enter fam, name , nomer, bykva for " << i+1 << "\n";
+		cin >> spisok[i].fam >> spisok[i].name >> spisok[i].nomer >> spisok[i].bykva;
+	}
+	for (int i = 0; i <= 10-1; i++)
+	for (int k = i + 1; k <= 10; k++){
+		if ((spisok[i].fam == spisok[k].fam) && (spisok[i].name == spisok[k].name)) {
+			cout << "Answer: \n";
+			cout << spisok[i].fam << " " << spisok[i].name << " " << spisok[i].nomer << " " << spisok[i].bykva << " " << i+1 << endl;
+			cout << spisok[k].fam << " " << spisok[k].name << " " << spisok[k].nomer << " " << spisok[k].bykva << " " << k+1 << endl;
+		}
+	}
+	return 0;
 }
-
